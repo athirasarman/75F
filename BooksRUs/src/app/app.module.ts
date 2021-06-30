@@ -11,13 +11,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-
-
-import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faSquare, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faSquare, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
+
+import { DashboardModule} from './dashboard/dashboard.module';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,6 @@ import { MatMenuModule } from '@angular/material/menu';
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
@@ -37,7 +38,9 @@ import { MatMenuModule } from '@angular/material/menu';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    DashboardModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
