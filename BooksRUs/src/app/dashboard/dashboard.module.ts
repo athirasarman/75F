@@ -10,12 +10,18 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BooksComponent } from './books/books.component';
+import { LayoutComponent } from './layout/layout.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 @NgModule({
   declarations: [
     SearchComponent,
-    BooksComponent
+    BooksComponent,
+    LayoutComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +31,11 @@ import { BooksComponent } from './books/books.component';
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatIconModule,
+    LayoutModule
   ]
 })
 export class DashboardModule { }
