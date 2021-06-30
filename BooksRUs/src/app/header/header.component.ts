@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
+import { Observable,of,Subscription } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef, OnDestroy} from '@angular/core';
+import { SharedSubjectsService } from '../shared-data/shared-subjects.service';
 
 @Component({
   selector: 'app-header',
@@ -11,18 +12,17 @@ import {ChangeDetectorRef, OnDestroy} from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnDestroy {
-   mobileQuery: MediaQueryList;
-   bookmarkCount=0;
-   private _mobileQueryListener: () => void;
-
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
+  bookmarkCount:Observable<number>=of(0);
+  count: Subscription;
+  constructor(private sharedSubjectsService:SharedSubjectsService) {
+    this.count=this.sharedSubjectsService.bookmarkCount.subscribe(data=>{
+      this.bookmarkCount=of(data);
+      
+    });
   }
 
    ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
+    
   }
 
 }
