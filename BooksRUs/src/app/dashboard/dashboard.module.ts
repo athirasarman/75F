@@ -15,6 +15,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { LayoutModule } from '@angular/cdk/layout';
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule,
+    FlexLayoutModule,    
     MatInputModule,
     MatButtonModule,
     MatSelectModule,
@@ -35,7 +36,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatGridListModule,
     MatMenuModule,
     MatIconModule,
-    LayoutModule
+    LayoutModule,
+    DashboardRoutingModule
   ]
 })
 export class DashboardModule { }
