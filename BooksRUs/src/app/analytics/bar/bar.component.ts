@@ -17,7 +17,6 @@ import { WeekwiseReadership } from '../../weekwise-readership';
 })
 export class BarComponent implements OnInit{
   currentRate = 8;
-  title = 'D3 Barchart with Angular 10';
   width: number;
   height: number;
   margin = { top: 20, right: 20, bottom: 30, left: 40 };
@@ -73,6 +72,21 @@ export class BarComponent implements OnInit{
       .attr('dy', '0.71em')
       .attr('text-anchor', 'end')
       .text('Frequency');
+
+      // Add X axis label:
+    this.g.append("text")
+    .attr("text-anchor", "end")
+    .attr("x", this.width)
+    .attr("y", this.height + this.margin.top + 10)
+    .text("Weeks");
+
+    // Y axis label:
+    this.g.append("text")
+    .attr("text-anchor", "end")
+    .attr("transform", "rotate(-90)")
+    .attr("y", -this.margin.left+10)
+    .attr("x", -this.margin.top)
+    .text("Readers")
   }
 
   drawBars() {
