@@ -5,12 +5,17 @@
        
       <mat-card-content >
      
-          <h3>{{book.name}}</h3>
+          <h3
+          #tooltip="matTooltip"
+          matTooltip="{{book.name}}"
+          matTooltipHideDelay="100000" 
+          matTooltipHideDelay="1000"
+          >{{book.name}}</h3>
           <h4>{{book.genre}}</h4>
     
       </mat-card-content>
       <mat-card-actions>
-         <a mat-raised-button color="primary" routerLink="/read/{{book.id}}"> <mat-icon>auto_stories</mat-icon>
+         <a mat-raised-button color="primary" routerLink="/read/{{book.id}}"> 
         Read    </a>
       </mat-card-actions>
     </mat-card>

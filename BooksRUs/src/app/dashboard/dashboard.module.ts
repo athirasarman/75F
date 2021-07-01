@@ -15,6 +15,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
+
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { SharedDataModule } from '../shared-data/shared-data.module';
@@ -30,7 +32,8 @@ import { ReadComponent } from './read/read.component';
   ],
   imports: [
     CommonModule,
-    FlexLayoutModule,    
+    FlexLayoutModule,
+    MatTooltipModule,    
     MatInputModule,
     MatButtonModule,
     MatSelectModule,
