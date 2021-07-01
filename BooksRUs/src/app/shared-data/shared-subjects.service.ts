@@ -32,4 +32,8 @@ getBookDetails(bookId:string):Books
   return bookDetails;
 }
 
+resetBookList(){
+  this.books.next(BookList);
+}
+
 }

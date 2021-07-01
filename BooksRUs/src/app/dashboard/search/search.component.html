@@ -4,9 +4,9 @@
            <mat-form-field >
 
      <mat-label>Search</mat-label>
-      <input matInput>
-     <button (click)="onSubmit()" type="submit" 
-     color="primary" matSuffix mat-icon-button aria-label="Button to go Home" routerLink="/">
+      <input type="text" matInput  [formControl]="searchTerm"/>
+     <button (click)="onSubmit()"
+     color="primary" matSuffix mat-icon-button aria-label="Button to Search">
          <mat-icon>search</mat-icon>
         </button>
   </mat-form-field>
