@@ -9,3 +9,11 @@ export const WeekwiseReadershipData:WeekwiseReadership[]=[
 {"week":6,"count":80},
 {"week":7,"count":180},
 {"week":8,"count":180}];
+
+export const BookByGenreData:any[]=[
+{"genre":"Drama","count":38},
+{"genre":"Children|Comedy","count":45},
+{"genre":"Comedy|Drama","count":64},
+{"genre":"Action|Comedy|Drama","count":68},
+{"genre":"Thriller","count":52}];
+

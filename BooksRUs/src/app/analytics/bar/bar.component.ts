@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import * as d3 from 'd3-selection';
 import * as d3Scale from 'd3-scale';
@@ -15,7 +15,7 @@ import { WeekwiseReadership } from '../../weekwise-readership';
   templateUrl: './bar.component.html',
   styleUrls: ['./bar.component.scss']
 })
-export class BarComponent {
+export class BarComponent implements OnInit{
   currentRate = 8;
   title = 'D3 Barchart with Angular 10';
   width: number;
