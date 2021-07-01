@@ -19,14 +19,14 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 import { faSquare, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
 
 import { DashboardModule} from './dashboard/dashboard.module';
-import { DummyComponent } from './dummy/dummy.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    DummyComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
