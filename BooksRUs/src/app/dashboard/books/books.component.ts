@@ -20,6 +20,8 @@ export class BooksComponent implements OnDestroy{
       this.bookList=of(data);
       if(data.length==0)
         this.display=false;
+      else
+        this.display=true;
     });
    
   }

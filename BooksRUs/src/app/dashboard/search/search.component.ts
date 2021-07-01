@@ -22,7 +22,7 @@ export class SearchComponent {
   onSubmit(): void {
    let term=this.searchTerm.value;
    let result:Books[]=[] as Books[];
-   this.sharedSubjectsService.resetBookList();
+   this.reset();
    let bookList=this.sharedSubjectsService.books.getValue();
    if (term.trim()) {
       // if not search term, return empty array.
@@ -35,5 +35,12 @@ export class SearchComponent {
        }
         this.sharedSubjectsService.books.next(result);
     }
+  }
+
+  reset():void{
+    this.sharedSubjectsService.resetBookList();
+    
+    this.searchTerm.reset();
+
   }
 }
