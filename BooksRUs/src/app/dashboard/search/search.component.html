@@ -1,20 +1,15 @@
 <form [formGroup]="search" class="search full-width">
-  <!--<mat-card >
-    <mat-card-content class="content">-->
+
       <div class="content">
            <mat-form-field >
 
      <mat-label>Search</mat-label>
       <input matInput>
-    <!--<mat-icon matSuffix>search</mat-icon>-->
-     <button color="primary" matSuffix mat-icon-button aria-label="Button to go Home" routerLink="/">
+     <button (click)="onSubmit()" type="submit" 
+     color="primary" matSuffix mat-icon-button aria-label="Button to go Home" routerLink="/">
          <mat-icon>search</mat-icon>
         </button>
   </mat-form-field>
        </div>
      
-  
-   <!-- </mat-card-content>
-  
-  </mat-card>-->
 </form>

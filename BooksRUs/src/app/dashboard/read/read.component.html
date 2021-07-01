@@ -1,0 +1,22 @@
+<form [formGroup]="addressForm" class="content">
+  <mat-card class="card" *ngIf="book">
+
+    <mat-card-header>
+    <button class="align" (click)="addBookMark()"
+     mat-icon-button aria-label="button with a bookmark icon">
+         <mat-icon>bookmarks</mat-icon>
+    </button> 
+    <mat-card-title>{{book.name}}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+     <iframe width="100%" height="100%"></iframe>
+    </mat-card-content>
+    <mat-card-actions>
+     
+          <a mat-raised-button color="primary" routerLink="/layout"> <mat-icon>auto_stories</mat-icon>
+        Go Back</a>
+
+    </mat-card-actions>
+  </mat-card>
+</form>

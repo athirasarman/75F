@@ -17,4 +17,19 @@ export class SharedSubjectsService {
 getBooks():Observable<any>{
    return this.books.asObservable();
 }
+
+getBookDetails(bookId:string):Books
+{
+  let bookDetails={} as Books;
+  let bookList=this.books.getValue();
+  for(var book of bookList)
+  {
+     if(book.id===bookId)
+     {
+       bookDetails=book;
+     }
+  }
+  return bookDetails;
+}
+
 }

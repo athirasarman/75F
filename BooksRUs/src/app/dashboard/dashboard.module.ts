@@ -17,12 +17,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { SharedDataModule } from '../shared-data/shared-data.module';
+import { ReadComponent } from './read/read.component';
+
 
 @NgModule({
   declarations: [
     SearchComponent,
     BooksComponent,
-    LayoutComponent
+    LayoutComponent,
+    ReadComponent
   ],
   imports: [
     CommonModule,
@@ -37,6 +41,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatMenuModule,
     MatIconModule,
     LayoutModule,
+    SharedDataModule,
     DashboardRoutingModule
   ]
 })

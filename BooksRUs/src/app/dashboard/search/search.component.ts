@@ -15,5 +15,6 @@ export class SearchComponent {
 
   onSubmit(): void {
     alert('Thanks!');
+    
   }
 }
