@@ -97,7 +97,7 @@ export class BarComponent implements OnInit{
       .attr('x', (d:any) => this.x(d.week))
       .attr('y', (d:any) => this.y(d.count))
       .attr('width', this.x.bandwidth())
-      .attr('fill', '#498bfc')
+      .attr('fill', '#4FC3F7')
       .attr('height', (d:any) => this.height - this.y(d.count));
   }
 

@@ -13,6 +13,8 @@ import { BarComponent } from './bar/bar.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
+
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PieComponent } from './pie/pie.component';
 
@@ -25,6 +27,7 @@ import { PieComponent } from './pie/pie.component';
   ],
   imports: [
     CommonModule,
+    MatSidenavModule,
     AnalyticsRoutingModule,
     MatGridListModule,
     MatCardModule,

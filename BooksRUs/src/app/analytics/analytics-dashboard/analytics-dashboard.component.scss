@@ -1,13 +1,37 @@
-.bounds {
-  //background-color:#ddd;
-  height :800px;
+@import 'src/app/Styles/variables';
 
-}
-.content {
-  min-width: 300px;
-  /*height: 400px;*/
+.wrapper {
+  display: flex;
+  margin: 0 8px;
+ // margin-top: 20px;
+
+  @media (max-width: $normal) {
+    flex-wrap: wrap;
+  }
+  
 }
 
-.card{
- top:60px;
+.info{
+  width: 100%;
+  @media (max-width: $normal) {
+  flex-wrap: wrap;
+  }
+}
+
+
+.layout {
+  width: 100%;
+
+
+  margin-top: 64px;
+}
+
+
+
+.layout-content {
+
+  @media (max-width: $small) {
+  flex-wrap: wrap;
+  }
+
 }

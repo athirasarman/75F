@@ -14,18 +14,10 @@ import * as d3Axis from 'd3-axis';
   templateUrl: './analytics-dashboard.component.html',
   styleUrls: ['./analytics-dashboard.component.scss']
 })
-export class AnalyticsDashboardComponent implements OnInit {
+export class AnalyticsDashboardComponent {
   
   constructor() {
     
-  }
-  breakpoint: number=2;
-   ngOnInit() {
-    this.breakpoint = (window.innerWidth <= 768) ? 1 : 2;
-  }
-  
-  onResize(event:any) {
-    this.breakpoint = (event.target.innerWidth <= 768) ? 1 : 2;
   }
 
   
