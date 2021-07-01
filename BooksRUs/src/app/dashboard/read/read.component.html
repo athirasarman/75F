@@ -2,11 +2,8 @@
   <mat-card class="card" *ngIf="book">
 
     <mat-card-header>
-    <button class="align" (click)="addBookMark()"
-     mat-icon-button aria-label="button with a bookmark icon">
-         <mat-icon>bookmarks</mat-icon>
-    </button> 
-    <mat-card-title>{{book.name}}</mat-card-title>
+        <mat-card-title>{{book.name}}</mat-card-title>
+  
     </mat-card-header>
 
     <mat-card-content>
@@ -14,7 +11,11 @@
     </mat-card-content>
     <mat-card-actions>
      
-          <a mat-raised-button color="primary" routerLink="/layout"> <mat-icon>auto_stories</mat-icon>
+     <button class="align" color="primary"(click)="addBookMark()"
+     mat-raised-button aria-label="button with a bookmark icon">
+         Book Mark
+    </button> 
+          <a mat-raised-button color="primary" routerLink="/layout">
         Go Back</a>
 
     </mat-card-actions>
